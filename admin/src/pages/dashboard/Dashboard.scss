@@ -1,0 +1,121 @@
+@import "./../../colors";
+
+.Dashboard-container {
+  height: 100vh;
+  background: $template;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: $whiteWashy;
+    font-size: 30px;
+    margin-top: 60px;
+  }
+
+  form {
+    display: flex;
+
+    @media only screen and (max-width: 1050px) {
+      flex-direction: column;
+    }
+
+    input {
+      border: none;
+      padding: 8px 20px;
+      background: $white;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: $text;
+      border-radius: 6px;
+      margin: 5px;
+    }
+
+    button {
+      border: none;
+      background: $header;
+      color: $white;
+      padding: 8px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        background: $headerHover;
+      }
+    }
+  }
+  .users {
+    height: 60vh;
+    overflow: scroll;
+    .user {
+      width: 99%;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid $whiteWashy;
+      button {
+        margin: 5px;
+        font-size: 15px;
+        padding: 0 20px;
+        height: 30px;
+        border: none;
+        border-radius: 6px;
+        background: $headerHover;
+        &:hover {
+          background: $header;
+        }
+      }
+      p {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+      span {
+        color: $headerHover;
+        font-weight: 600;
+        margin-right: 5px;
+      }
+      textarea {
+        border-radius: 5px;
+        padding: 3px;
+        border: none;
+        width: 180px;
+        height: 36.5px;
+      }
+    }
+  }
+  .error {
+    color: red;
+    border: 2px solid red;
+  }
+  .comunicator {
+    text-align: center;
+    min-height: 70px;
+    max-height: 70px;
+    width: 265px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    transition: 0.2s;
+    border: 3px solid transparent;
+    padding: 0px;
+    border-radius: 6px;
+    font-weight: 600;
+    opacity: 0;
+    img {
+      height: 60px;
+      width: 65px;
+    }
+  }
+  .comunicator-false {
+    opacity: 1;
+    color: $header;
+    border: 3px solid $header;
+  }
+  .comunicator-true {
+    opacity: 1;
+    color: #fff;
+    border: 3px solid rgb(23, 189, 23);
+  }
+}
